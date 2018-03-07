@@ -1,0 +1,12 @@
+{
+  "name": "nicholasmole/add_custom_status",
+  "version" : "0.1.0",
+  "description": "Add and edit Custom Status for posts",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Nicholas Mole",
+      "email": "nmole065@gmail.com"
+    }
+  ]
+}
