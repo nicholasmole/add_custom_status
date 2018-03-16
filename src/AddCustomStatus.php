@@ -54,8 +54,9 @@ class AddCustomStatus {
 		foreach($customLabels as $_label) {
 			register_post_status( $_label, array(
 				'label'                     => _x( $_label, 'post' ),
-				'public'                    => true,
-				'exclude_from_search'       => false,
+				'public'                    => false,
+				'private'                   => true,
+				'exclude_from_search'       => true,
 				'show_in_admin_all_list'    => true,
 				'show_in_admin_status_list' => true,
 				'label_count'               => _n_noop(ucwords( $_label).' <span class="count">(%s)</span>', ucwords($_label).' <span class="count">(%s)</span>' ),
@@ -101,7 +102,7 @@ class AddCustomStatus {
 					</script>
 					<?php
 			}
-		}
+		
     ?>
     <script>
     jQuery(document).ready(function($){
@@ -116,6 +117,7 @@ class AddCustomStatus {
     });
     </script>
     <?php
+		}
 	}
 
 	//(Mostly Copied) Register a column and merge it into the wp standard columns
